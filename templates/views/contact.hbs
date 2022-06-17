@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allie Leforest | Contact</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    {{>nav}}
+    {{>menuBtn}}
+    {{>hamburgerMenu}}
+    {{>overlay}}
+    <section id="contact">
+        <form class="contact__form" action="https://formsubmit.co/websume.net@gmail.com" method="POST">
+            <h1>Contact</h1>
+            <span>
+                <input type="text" placeholder="First name" required>
+                <input type="text" placeholder="Last name" required>
+            </span>
+            <span>
+                <input type="email" placeholder="Email address" required> 
+                <input type="text" placeholder="Subject" required>
+            </span>
+            <textarea name="" cols="20" rows="20" placeholder="Please provide additional information"></textarea>
+            <button class="form--btn">Submit</button>
+        </form>
+    </section>
+    <script type="module" src="js/hamburgerAnimation.js"></script>
+</body>
+</html>

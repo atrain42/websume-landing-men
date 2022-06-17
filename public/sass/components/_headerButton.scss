@@ -1,0 +1,74 @@
+$speed: 0.5s;
+
+.btn-flip{
+  opacity: 1;
+  font-size: 1.8rem;
+  font-family: 'Montserrat', sans-serif;
+  outline: 0;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  border: 1px solid rgba(50, 50, 50, 0.247);
+  
+  &:after{
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    color: #323237;
+    display: block;
+    transition: $speed;
+    position: absolute;
+    background: #adadaf;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+  }
+  
+  &:before{
+    top: 0;
+    left: 0;
+    opacity: 1;
+    color: #eee;
+    display: block;
+    padding: 0 30px;
+    line-height: 40px;
+    transition: $speed;
+    position: relative;
+    background: rgb(49, 83, 64);
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+@media (hover: hover) {
+  .btn-flip:hover {
+    &:after{
+      opacity: 1;
+      transform: translateY(0) rotateX(0);
+    }
+    
+    &:before{
+      opacity: 0;
+      transform: translateY(50%) rotateX(90deg);
+    }
+
+  }
+}
+
+@media (max-width: 425px) {
+  .btn-flip {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .btn-flip {
+    font-size: 1rem;
+  }
+}
