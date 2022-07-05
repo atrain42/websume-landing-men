@@ -27,3 +27,9 @@ html {
     font-size: 6rem;
     animation: SlideIn 1s linear;
 }
+
+@media (max-width: 550px) {
+    :root {
+        --button-width: 30px;
+    }
+}
